@@ -5,7 +5,7 @@ When trying to build with custom routes, following happens:
 
 Issue 1 - Not able to add mapper without custom webpack: It complains of following:  
 
-Error: Cannot find module '/Users/prabhatsingh/helossr/api/ctrls/Test.js'
+Error: Cannot find module '/Users/prabhatsingh/ngunidemo/api/ctrls/Test.js'
 
 Issue 2- When I add the custom-webpack:   
   "builder": "@angular-builders/custom-webpack:server",   
