@@ -1,27 +1,30 @@
-# Ngunidemo
+Project created from https://github.com/ssunils/angularadmin  
+To test ng-universal   
+Issue 1 - Not able to add mapper without custom webpack: It complains of following:  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
+Error: Cannot find module '/Users/prabhatsingh/helossr/api/ctrls/Test.js'
 
-## Development server
+Issue 2- When I add the custom-webpack:   
+  "builder": "@angular-builders/custom-webpack:server",   
+I get following error: Seems like quotes are stripped from the values of webpack.   
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Compiled successfully.
+/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:219284
+  if (( true && Object({"rules":Object({"0":Object({"test":/\.js$/,"use":Object({"0":Object({"loader":'file-loader',"options":Object({"name":api/ctrls/[name].js,"publicPath":((p) => p.replace("api/ctrls", ""))})})})})})}) !== null) && module.exports) {
+                                                                                                                                             ^
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ReferenceError: api is not defined
+    at Object.<anonymous> (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:219284:142)
+    at Object../node_modules/ipaddr.js/lib/ipaddr.js (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:219949:4)
+    at __webpack_require__ (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:20:30)
+    at Object../node_modules/proxy-addr/index.js (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:231898:14)
+    at __webpack_require__ (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:20:30)
+    at Object../node_modules/express/lib/utils.js (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:212134:17)
+    at __webpack_require__ (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:20:30)
+    at Object../node_modules/express/lib/application.js (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:208441:19)
+    at __webpack_require__ (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:20:30)
+    at Object../node_modules/express/lib/express.js (/Users/prabhatsingh/ngunidemo/dist/ngunidemo/server/main.js:209091:13)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+A server error has occurred.
+node exited with 1 code.
