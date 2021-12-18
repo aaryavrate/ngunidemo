@@ -1,5 +1,8 @@
 Project created from https://github.com/ssunils/angularadmin  
-To test ng-universal   
+To test ng-universal   with express-routes-mapper
+
+When trying to build with custom routes, following happens:
+
 Issue 1 - Not able to add mapper without custom webpack: It complains of following:  
 
 Error: Cannot find module '/Users/prabhatsingh/helossr/api/ctrls/Test.js'
